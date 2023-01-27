@@ -1,6 +1,7 @@
 import './index.css'
 const redirect2WS = (number) => {
-    window.location.href = `https://wa.me/${number}`
+    //window.location.href = `https://wa.me/+${number}`
+    window.location.href = `https://api.whatsapp.com/send?phone=${number}&type=phone_number`
 }
 
 const validateNumber = async (number) => {
