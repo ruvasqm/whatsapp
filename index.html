@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+        .bg-mask {
+            background-image: url('./src/assets/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+  </head>
+  <body class="h-full w-full bg-offwhite dark:bg-offblack">
+    <div
+      id="app"
+      class="h-full w-full flex flex-col items-center justify-center bg-mask"
+    >
+        <div class="py-5 px-44 flex flex-row items-center justify-end mb-auto bg-wgreen w-full">
+            <h1 class="p-3 text-7xl font-bold text-white mr-auto">
+                Waa.me
+            </h1>
+            <a class="py-3 px-8 text-2xl font-bold text-white mx-10 rounded-full">
+                Blog
+            </a>
+            <a class="py-3 px-8 text-2xl font-bold leading-none text-ptext dark:text-dptext mx-10 rounded-full bg-accent dark:bg-daccent">
+                ¡Aprende!
+            </a>
+        </div>
+        <div class="grow w-full flex flex-col items-center justify-center">
+            <div class="flex flex-col gap-20 lg:w-2/3 mb-10 rounded-xl bg-white dark:bg-daccent p-10 -ml-72">
+                <h1 class="text-6xl font-bold text-ptext dark:text-dptext">
+                    Envía un mensaje en Whastapp sin agregarlo como contacto
+                </h1>
+                <h2 class="text-3xl font-normal text-wblue ml-auto mt-auto">
+                    Introduce el número con el código de país en la casilla.
+                </h2>
+            </div>
+            <form id="sendForm" class="flex flex-row items-center justify-between bg-accent dark:bg-daccent gap-3 py-6 lg:px-8">
+                <input
+                    id="number"
+                    type="text"
+                    class="grow p-3 text-7xl font-bold text-ptext dark:text-dptext bg-white dark:bg-dwhite"
+                    placeholder="584123964517"
+                />
+                <button class="text-7xl text-icon dark:text-dicon cursor-pointer" type="submit">
+                    <svg viewBox="0 0 24 24" height="72" width="72" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="currentColor" d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"></path></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
